@@ -1,12 +1,13 @@
-const int pinPWM = 9; // Pin digital yang digunakan untuk output PWM
+const int pinPWM = 9; // Pin output
 
 void setup() {
-  pinMode(pinPWM, OUTPUT); 
+    pinMode(pinPWM, OUTPUT); 
 }
 
 void loop() {
-  digitalWrite(pinPWM, HIGH); // Set pin PWM menjadi HIGH
-  delayMicroseconds(500);     // Tunggu selama 500 mikrodetik (50% duty cycle)
-  digitalWrite(pinPWM, LOW);  // Set pin PWM menjadi LOW
-  delayMicroseconds(500);     // Tunggu selama 500 mikrodetik (50% duty cycle)
+// duty cycle = ((ON time) / periode)* 100 %
+    digitalWrite(pinPWM, HIGH); // pin PWM HIGH
+    delayMicroseconds(500);     // sleep selama 500 ms
+    digitalWrite(pinPWM, LOW);  // pin PWM LOW
+    delayMicroseconds(500);     // sleep selama 500 ms
 }
